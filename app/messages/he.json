@@ -1,0 +1,151 @@
+{
+  "HomePage": {
+    "title": "ישראסל - מנוע חיפוש נתונים פתוחים ישראלי",
+    "description": "חפש וגלה נתונים פתוחים ישראליים עם ישראסל, מנוע החיפוש המוביל למאגרי נתונים ממשרדי ממשלה וסוכנויות שונות.",
+    "keywords": "נתונים פתוחים ישראליים, מאגרי נתונים ממשלתיים, מנוע חיפוש נתונים, נתונים ציבוריים",
+    "landing_title": "ישראסל - מנוע חיפוש נתונים פתוחים של מכוניות ישראליות",
+    "landing_description": "חפש וגלה נתונים פתוחים ישראליים על מכוניות עם ישראסל, מנוע החיפוש המוביל למאגרי נתונים ממשרדי ממשלה וסוכנויות שונות.",
+    "videoTagNotSupported": "הדפדפן שלך אינו תומך בתג הווידאו."
+  },
+  "Header": {
+    "home": "דף הבית",
+    "donate": "תרומה",
+    "contact": "צור קשר"
+  },
+   "Footer": {
+    "loveWhatYouSee": "אהבתם את מה שאתם רואים? ☕",
+    "mainMessage": "יצירת תוכן מדהים דורשת זמן, מאמץ והרבה קפה! אם הפרויקט הזה עזר לכם או העלה חיוך על פניכם, שקלו לקנות לי קפה. כל כוס מתדלקת יצירתיות נוספת! ✨",
+    "buyMeACoffee": "קנו לי קפה",
+    "madeWith": "נוצר ב-💜 והרבה ☕ | תודה על תמיכתכם!"
+  },
+  "CarCheck": {
+    "searchVehicleButton": "חיפוש רכב",
+    "searchHint": "הזן את מספר הרישוי של הרכב שלך בן 7 או 8 ספרות כדי לגשת לנתוני משרד התחבורה הרשמיים",
+    "vehicleNumberLabel": "מספר רכב",
+    "vehicleNumberPlaceholder": "הזן מספר רכב (למשל, 1234567)",
+    "errorNotFound": "לא נמצא מידע עבור מספר רכב: {carNumber}. נסה מספר הדגמה: 1234567",
+    "errorFetching": "שגיאה באחזור נתונים: {message}",
+    "disabledPermitBadge": "תו נכה (מאושר)",
+    "importedBadge": "מיובא",
+    "activeBadge": "פעיל",
+    "inactiveBadge": "לא פעיל",
+    "inactiveVehicleWarning": "אינו מורשה לנוע על הכביש.",
+    "inactiveVehicleWarningStrong": "רכב זה אינו פעיל",
+    "cancellationDate": "תאריך ביטול",
+    "unknown": "לא ידוע",
+    "essentialInformationTitle": "מידע חיוני",
+    "lastTestDate": "תאריך מבחן אחרון",
+    "kilometers": "קילומטרים",
+    "validUntil": "בתוקף עד",
+    "fuelType": "סוג דלק",
+    "ownership": "בעלות",
+    "completeVehicleInfoTitle": "מידע מלא על הרכב",
+    "manufacturingYear": "שנת ייצור",
+    "modelCode": "קוד דגם",
+    "vehicleColor": "צבע רכב",
+    "engineModel": "דגם מנוע",
+    "engineCapacity": "נפח מנוע",
+    "horsepower": "כוח סוס",
+    "numberOfDoors": "מספר דלתות",
+    "roadEntryDate": "תאריך עלייה לכביש",
+    "trimLevel": "רמת גימור",
+    "pollutionGroup": "קבוצת זיהום",
+    "frontTires": "צמיגים קדמיים",
+    "rearTires": "צמיגים אחוריים",
+    "engineCapacityValue": "{value} סמ\"ק",
+    "horsepowerValue": "{value} כ\"ס",
+    "pollutionGroupValue": "קבוצה {group}",
+    "securityInformationTitle": "מידע אבטחה",
+    "vinNumber": "מספר VIN",
+    "disabilityAccess": "גישה לנכים",
+    "certified": "מאושר",
+    "notApplicable": "לא ישים",
+    "safetyRecallsTitle": "קריאות בטיחות",
+    "recallNotification": "הודעה",
+    "recallYear": "שנת קריאה",
+    "recommendedFix": "תיקון מומלץ",
+    "noDescription": "לא סופק תיאור.",
+    "noActiveRecalls": "לא נמצאו קריאות פעילות",
+    "noOutstandingRecalls": "לרכב זה אין קריאות בטיחות תלויות ועומדות.",
+    "ownershipHistoryTitle": "היסטוריית בעלות",
+    "period": "תקופה",
+    "ownershipType": "סוג בעלות",
+    "date": "תאריך",
+    "status": "סטטוס",
+    "currentOwnership": "נוכחי",
+    "previousOwnership": "קודם {index}",
+    "activeStatus": "פעיל",
+    "historicalStatus": "היסטורי",
+    "ownershipHelpTitle": "הבנת היסטוריית בעלות",
+    "ownershipHelpDealerTitle": "סוחר",
+    "ownershipHelpDealerDesc": "הרכב היה בבעלות סוחר מורשה או ישות מסחרית.",
+    "ownershipHelpPrivateTitle": "פרטי",
+    "ownershipHelpPrivateDesc": "הרכב היה בבעלות אדם פרטי.",
+    "ownershipHelpLeaseTitle": "ליסינג",
+    "ownershipHelpLeaseDesc": "הרכב היה תחת הסכם ליסינג.",
+    "ownershipHelpDateFormatTitle": "פורמט תאריך",
+    "ownershipHelpDateFormatDesc": "חודש ושנה של שינוי הבעלות.",
+    "noOwnershipHistory": "לא נמצאה היסטוריית בעלות",
+    "noOwnershipHistoryDesc": "אין היסטוריית בעלות ידועה לרכב זה."
+  },
+  "DataTranslations": {
+    "Fuel": {
+      "בנזין": "בנזין",
+      "דיזל": "דיזל",
+      "חשמלי": "חשמלי",
+      "היברידי": "היברידי",
+      "גז": "גז",
+      "חשמל/בנזין": "חשמל/בנזין"
+    },
+    "Manufacturer": {
+      "קיה קוריאה": "קיה קוריאה",
+      "טויוטה יפן": "טויוטה יפן",
+      "מזדה יפן": "מאזדה יפן",
+      "יונדאי קוריאה": "יונדאי קוריאה",
+      "פולקסווגן גרמניה": "פולקסווגן גרמניה",
+      "אלפא רומיאו": "אלפא רומיאו",
+      "מרצדס בנץ גרמנ": "מרצדס בנץ גרמניה",
+      "ב מ וו גרמניה": "ב.מ.וו גרמניה"
+    },
+    "Color": {
+      "אפור": "אפור",
+      "לבן": "לבן",
+      "שחור": "שחור",
+      "כחול": "כחול",
+      "אדום": "אדום",
+      "כסף": "כסף",
+      "זהב": "זהב"
+    },
+    "Ownership": {
+      "פרטי": "פרטי",
+      "סוחר": "סוחר",
+      "החכר": "ליסינג",
+      "ממשלתי": "ממשלתי",
+      "חברה": "חברה",
+      "אחר": "אחר"
+    },
+    "ModelType": {
+      "P": "רכב נוסעים",
+      "M": "אופנוע",
+      "T": "משאית",
+      "B": "אוטובוס"
+    },
+    "RecallTypes": {
+      "תקלה סידרתית בטיחותית": "ריקול בטיחותי",
+      "קמפיין שרות טכני": "קמפיין שירות"
+    },
+    "ProblemTypes": {
+      "כריות אוויר": "כריות אוויר",
+      "בלמים": "בלמים",
+      "מנוע ומערכותיו": "מנוע ומערכותיו",
+      "חשמל אליקטרוניקה ומיזוג": "חשמל ומיזוג אוויר",
+      "אביזרים": "אביזרים",
+      "אחר": "אחר"
+    },
+    "RepairMethods": {
+      "החלפה": "החלפה",
+      "בדיקה": "בדיקה",
+      "עדכון תוכנה": "עדכון תוכנה"
+    }
+  }
+}

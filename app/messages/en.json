@@ -1,0 +1,151 @@
+{
+  "HomePage": {
+    "title": "Israsel - Israeli Open Data Search Engine",
+    "description": "Search and explore Israeli open data with Israsel, the premier search engine for datasets from various government ministries and agencies.",
+    "keywords": "Israeli open data, government datasets, data search engine, public data",
+    "landing_title": "Israsel - Israeli Cars Open Data Search Engine",
+    "landing_description": "Search and explore Israeli open data about cars with Israsel, the premier search engine for datasets from various government ministries and agencies.",
+    "videoTagNotSupported": "Your browser does not support the video tag."
+  },
+    "Header": {
+    "home": "Home",
+    "donate": "Donate",
+    "contact": "Contact"
+  },
+  "Footer": {
+    "loveWhatYouSee": "Love what you see? ☕",
+    "mainMessage": "Creating awesome content takes time, effort, and lots of coffee! If this project helped you or brought a smile to your face, consider buying me a coffee. Every cup fuels more creativity! ✨",
+    "buyMeACoffee": "Buy me a coffee",
+    "madeWith": "Made with 💜 and lots of ☕ | Thank you for your support!"
+  },
+  "CarCheck": {
+    "searchVehicleButton": "Search Vehicle",
+    "searchHint": "Enter your 7 or 8-digit vehicle registration number to access official Ministry of Transport data",
+    "vehicleNumberLabel": "Vehicle Number",
+    "vehicleNumberPlaceholder": "Enter vehicle number (e.g., 1234567)",
+    "errorNotFound": "No information found for vehicle number: {carNumber}. Try demo number: 1234567",
+    "errorFetching": "Error fetching data: {message}",
+    "disabledPermitBadge": "Disabled Permit (Certified)",
+    "importedBadge": "Imported",
+    "activeBadge": "Active",
+    "inactiveBadge": "Inactive",
+    "inactiveVehicleWarning": "it is not legally allowed on the road.",
+    "inactiveVehicleWarningStrong": "This vehicle is not active",
+    "cancellationDate": "Date of canceling",
+    "unknown": "Unknown",
+    "essentialInformationTitle": "Essential Information",
+    "lastTestDate": "Last Test Date",
+    "kilometers": "Kilometers",
+    "validUntil": "Valid Until",
+    "fuelType": "Fuel Type",
+    "ownership": "Ownership",
+    "completeVehicleInfoTitle": "Complete Vehicle Information",
+    "manufacturingYear": "Manufacturing Year",
+    "modelCode": "Model Code",
+    "vehicleColor": "Vehicle Color",
+    "engineModel": "Engine Model",
+    "engineCapacity": "Engine Capacity",
+    "horsepower": "Horsepower",
+    "numberOfDoors": "Number of Doors",
+    "roadEntryDate": "Road Entry Date",
+    "trimLevel": "Trim Level",
+    "pollutionGroup": "Pollution Group",
+    "frontTires": "Front Tires",
+    "rearTires": "Rear Tires",
+    "engineCapacityValue": "{value}cc",
+    "horsepowerValue": "{value} HP",
+    "pollutionGroupValue": "Group {group}",
+    "securityInformationTitle": "Security Information",
+    "vinNumber": "VIN Number",
+    "disabilityAccess": "Disability Access",
+    "certified": "Certified",
+    "notApplicable": "Not Applicable",
+    "safetyRecallsTitle": "Safety Recalls",
+    "recallNotification": "Notification",
+    "recallYear": "Recall Year",
+    "recommendedFix": "Recommended Fix",
+    "noDescription": "No description provided.",
+    "noActiveRecalls": "No Active Recalls Found",
+    "noOutstandingRecalls": "This vehicle has no outstanding safety recalls.",
+    "ownershipHistoryTitle": "Ownership History",
+    "period": "Period",
+    "ownershipType": "Ownership Type",
+    "date": "Date",
+    "status": "Status",
+    "currentOwnership": "Current",
+    "previousOwnership": "Previous {index}",
+    "activeStatus": "Active",
+    "historicalStatus": "Historical",
+    "ownershipHelpTitle": "Understanding Ownership History",
+    "ownershipHelpDealerTitle": "Dealer",
+    "ownershipHelpDealerDesc": "Vehicle was owned by an authorized dealer or commercial entity.",
+    "ownershipHelpPrivateTitle": "Private",
+    "ownershipHelpPrivateDesc": "Vehicle was owned by a private individual.",
+    "ownershipHelpLeaseTitle": "Lease",
+    "ownershipHelpLeaseDesc": "Vehicle was under a leasing agreement.",
+    "ownershipHelpDateFormatTitle": "Date Format",
+    "ownershipHelpDateFormatDesc": "Month and Year of the ownership change.",
+    "noOwnershipHistory": "No Ownership History Found",
+    "noOwnershipHistoryDesc": "There is no known ownership history for this vehicle."
+  },
+  "DataTranslations": {
+    "Fuel": {
+      "בנזין": "Gasoline",
+      "דיזל": "Diesel",
+      "חשמלי": "Electric",
+      "היברידי": "Hybrid",
+      "גז": "Gas",
+      "חשמל/בנזין": "Electric/Gasoline"
+    },
+    "Manufacturer": {
+      "קיה קוריאה": "Kia Korea",
+      "טויוטה יפן": "Toyota Japan",
+      "מזדה יפן": "Mazda Japan",
+      "יונדאי קוריאה": "Hyundai Korea",
+      "פולקסווגן גרמניה": "Volkswagen Germany",
+      "אלפא רומיאו": "Alfa Romeo",
+      "מרצדס בנץ גרמנ": "Mercedes-Benz Germany",
+      "ב מ וו גרמניה": "BMW Germany"
+    },
+    "Color": {
+      "אפור": "Gray",
+      "לבן": "White",
+      "שחור": "Black",
+      "כחול": "Blue",
+      "אדום": "Red",
+      "כסף": "Silver",
+      "זהב": "Gold"
+    },
+    "Ownership": {
+      "פרטי": "Private",
+      "סוחר": "Dealer",
+      "החכר": "Lease",
+      "ממשלתי": "Government",
+      "חברה": "Company",
+      "אחר": "Other"
+    },
+    "ModelType": {
+      "P": "Passenger Car",
+      "M": "Motorcycle",
+      "T": "Truck",
+      "B": "Bus"
+    },
+    "RecallTypes": {
+      "תקלה סידרתית בטיחותית": "Safety Recall",
+      "קמפיין שרות טכני": "Service Campaign"
+    },
+    "ProblemTypes": {
+      "כריות אוויר": "Airbags",
+      "בלמים": "Brakes",
+      "מנוע ומערכותיו": "Engine & Systems",
+      "חשמל אליקטרוניקה ומיזוג": "Electrical & A/C",
+      "אביזרים": "Accessories",
+      "אחר": "Other"
+    },
+    "RepairMethods": {
+      "החלפה": "Replacement",
+      "בדיקה": "Inspection",
+      "עדכון תוכנה": "Software Update"
+    }
+  }
+}
