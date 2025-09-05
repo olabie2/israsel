@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.6.1",
+    "@next/third-parties": "^15.5.2",
     "@paypal/paypal-js": "^8.4.1",
     "@paypal/react-paypal-js": "^8.9.1",
     "class-variance-authority": "^0.7.1",
@@ -18,7 +19,7 @@
     "lodash": "^4.17.21",
     "lucide-react": "^0.541.0",
     "negotiator": "^1.0.0",
-    "next": "15.5.0",
+    "next": "^15.5.2",
     "next-i18next": "^15.4.2",
     "next-intl": "^4.3.5",
     "react": "19.1.0",

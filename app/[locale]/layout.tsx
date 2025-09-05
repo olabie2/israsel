@@ -8,7 +8,7 @@ import { notFound } from "next/navigation";
 import { routing } from "../i18n/routing";
 import HeaderServerComponent from "@/components/HeaderServerComponent";
 import Footer from "@/components/Footer";
-
+import { GoogleAnalytics } from '@next/third-parties/google';
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -43,6 +43,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
           {children}
           <Footer/>
         </body>
+        <GoogleAnalytics gaId="G-QWNHFV141Q" />
       </NextIntlClientProvider>
     </html>
   );
