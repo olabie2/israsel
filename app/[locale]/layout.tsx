@@ -1,4 +1,3 @@
-
 import "./globals.css";
 import "../../public/style.css";
 import { Poppins } from "next/font/google";
@@ -9,8 +8,6 @@ import { routing } from "../i18n/routing";
 import HeaderServerComponent from "@/components/HeaderServerComponent";
 import Footer from "@/components/Footer";
 import { GoogleAnalytics } from '@next/third-parties/google';
-
-
 import type { Metadata } from 'next';
 
 const poppins = Poppins({
@@ -21,23 +18,26 @@ const poppins = Poppins({
 
 const rtlLangs = ["ar", "he"];
 
+
 type LayoutProps = {
   children: React.ReactNode;
-  params: {
+  params: Promise<{
     locale: string;
-  };
+  }>;
 };
 
 type Locale = (typeof routing.locales)[number];
 
 
-export async function generateMetadata({ params: { locale } }: LayoutProps): Promise<Metadata> {
+export async function generateMetadata({ params }: LayoutProps): Promise<Metadata> {
+ 
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
   return {
     title: {
-      template: `%s | ${t('siteName')}`, 
-      default: t('siteName'), 
+      template: `%s | ${t('siteName')}`,
+      default: t('siteName'),
     },
     description: t('siteDescription'),
     keywords: t('keywords').split(', '),
@@ -51,19 +51,25 @@ export async function generateMetadata({ params: { locale } }: LayoutProps): Pro
       },
     },
     openGraph: {
-        title: t('siteName'),
-        description: t('siteDescription'),
-        url: `https://www.israsel.com/${locale}`,
-        siteName: t('siteName'),
-        locale: locale,
-        type: 'website',
+      title: t('siteName'),
+      description: t('siteDescription'),
+      url: `https://www.israsel.com/${locale}`,
+      siteName: t('siteName'),
+      locale: locale,
+      type: 'website',
+    },
+   
+    twitter: {
+      card: 'summary_large_image',
+      title: t('siteName'),
+      description: t('siteDescription'),
     },
   };
 }
 
-
 export default async function RootLayout({ children, params }: LayoutProps) {
-  const { locale } = params;
+ 
+  const { locale } = await params;
   
   if (!routing.locales.includes(locale as Locale)) {
     notFound();
