@@ -18,6 +18,12 @@
     "buyMeACoffee": "Buy me a coffee",
     "madeWith": "Made with 💜 and lots of ☕ | Thank you for your support!"
   },
+   "Metadata": {
+    "siteName": "Israsel - Israeli Vehicle Information",
+    "siteDescription": "Your one-stop source for comprehensive information on Israeli license plates. Enter a car number to get details on ownership, history, and technical data.",
+    "keywords": "israel, license plate, car number, vehicle information, car check, israsel",
+    "homeTitle": "Home"
+  },
   "CarCheck": {
     "searchVehicleButton": "Search Vehicle",
     "searchHint": "Enter your 7 or 8-digit vehicle registration number to access official Ministry of Transport data",
