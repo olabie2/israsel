@@ -1,14 +1,18 @@
-// import type { Metadata } from "next";
+
 import "./globals.css";
 import "../../public/style.css";
 import { Poppins } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "../i18n/routing";
 import HeaderServerComponent from "@/components/HeaderServerComponent";
 import Footer from "@/components/Footer";
 import { GoogleAnalytics } from '@next/third-parties/google';
+
+
+import type { Metadata } from 'next';
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -19,15 +23,47 @@ const rtlLangs = ["ar", "he"];
 
 type LayoutProps = {
   children: React.ReactNode;
-  params: Promise<{
+  params: {
     locale: string;
-  }>;
+  };
 };
 
 type Locale = (typeof routing.locales)[number];
 
+
+export async function generateMetadata({ params: { locale } }: LayoutProps): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'Metadata' });
+
+  return {
+    title: {
+      template: `%s | ${t('siteName')}`, 
+      default: t('siteName'), 
+    },
+    description: t('siteDescription'),
+    keywords: t('keywords').split(', '),
+    metadataBase: new URL('https://www.israsel.com'),
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        'en': '/en',
+        'he': '/he',
+        'x-default': '/en',
+      },
+    },
+    openGraph: {
+        title: t('siteName'),
+        description: t('siteDescription'),
+        url: `https://www.israsel.com/${locale}`,
+        siteName: t('siteName'),
+        locale: locale,
+        type: 'website',
+    },
+  };
+}
+
+
 export default async function RootLayout({ children, params }: LayoutProps) {
-  const { locale } = await params; // Await the params Promise
+  const { locale } = params;
   
   if (!routing.locales.includes(locale as Locale)) {
     notFound();
