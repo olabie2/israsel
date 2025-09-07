@@ -25,6 +25,8 @@
     "homeTitle": "Home"
   },
   "CarCheck": {
+    "errorEmptyInput": "Please enter a license plate number.",
+    "errorInvalidPlate": "License plate must be 6 or 7 or 8 digits.",
     "searchVehicleButton": "Search Vehicle",
     "searchHint": "Enter your 7 or 8-digit vehicle registration number to access official Ministry of Transport data",
     "vehicleNumberLabel": "Vehicle Number",
@@ -43,7 +45,7 @@
     "lastTestDate": "Last Test Date",
     "kilometers": "Kilometers",
     "validUntil": "Valid Until",
-    "fuelType": "Fuel Type",
+    "fuelType": "Fuel Type",  
     "ownership": "Ownership",
     "completeVehicleInfoTitle": "Complete Vehicle Information",
     "manufacturingYear": "Manufacturing Year",

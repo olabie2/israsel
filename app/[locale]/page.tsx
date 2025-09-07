@@ -114,7 +114,7 @@ const formatDate = (dateStr?: string): string => {
       day: "numeric",
     });
   } catch (e) {
-    console.log(e)
+    console.log(e);
     return dateStr;
   }
 };
@@ -446,12 +446,25 @@ export default function CarCheckPage() {
 
   const handleSearch = async (e: FormEvent) => {
     e.preventDefault();
+
+    const cleanedInput = carNumberInput.replace(/-/g, "").trim();
+
+    if (cleanedInput === "") {
+      setError(tCar("errorEmptyInput"));
+      return;
+    }
+
+    if (!/^\d{6,8}$/.test(cleanedInput)) {
+      setError(tCar("errorInvalidPlate"));
+      return;
+    }
+
     setSearched(true);
     setError(null);
     setVehicleData(null);
     setSearchAnimation(true);
     try {
-      const data = (await getAllVehicleData(carNumberInput)) as Record<
+      const data = (await getAllVehicleData(cleanedInput)) as Record<
         string,
         unknown[] | undefined
       >;
@@ -565,7 +578,7 @@ export default function CarCheckPage() {
       <Head>
         <title>{t("landing_title")}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head> 
+      </Head>
       <div className="relative flex min-h-[60vh] items-center justify-center overflow-hidden">
         <video
           className="absolute inset-0 h-full w-full object-cover"
