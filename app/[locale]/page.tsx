@@ -2,6 +2,7 @@
 // import _ from "lodash";
 // ***** CHANGE 1: Import useMessages *****
 import { useTranslations, useMessages } from "next-intl";
+import { Loader2 } from "lucide-react";
 import React, {
   useState,
   FC,
@@ -633,26 +634,12 @@ export default function CarCheckPage() {
               className="flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-3 font-semibold text-white shadow-lg transition-all duration-200 hover:from-blue-700 hover:to-indigo-700 hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-70"
             >
               {searchAnimation ? (
-                <svg
-                  className="h-5 w-5 animate-spin text-white"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="00 24 24"
-                >
-                  <circle
-                    className="opacity-25"
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    strokeWidth="4"
-                  ></circle>
-                  <path
-                    className="opacity-75"
-                    fill="currentColor"
-                    d="M4 12a8 8 0 018-8V4a4 4 0 00-4 4H4z"
-                  ></path>
-                </svg>
+                <>
+                  <div className="flex items-center">
+                    <Loader2 className="mr-3 h-5 w-5 animate-spin" />
+                    Processing…
+                  </div>
+                </>
               ) : (
                 <>
                   <FaSearch className="me-2" /> {tCar("searchVehicleButton")}
