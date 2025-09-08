@@ -180,21 +180,7 @@ const processOwnershipHistory = (
   return sortedHistory;
 };
 
-// --- Reusable UI Components (No changes) ---
-// const Tooltip: FC<PropsWithChildren<{ text: string }>> = ({
-//   text,
-//   children,
-// }) => (
-//   <div className="group relative inline-block">
-//     {" "}
-//     {children}{" "}
-//     <div className="absolute bottom-full left-1/2 z-50 mb-2 -translate-x-1/2 transform whitespace-nowrap rounded-lg bg-gray-900 px-3 py-2 text-xs text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100 pointer-events-none">
-//       {" "}
-//       {text}{" "}
-//       <div className="absolute top-full left-1/2 -translate-x-1/2 transform border-4 border-transparent border-t-gray-900"></div>{" "}
-//     </div>{" "}
-//   </div>
-// );
+
 interface InfoItemProps {
   label: string;
   value: React.ReactNode;

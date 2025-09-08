@@ -9,7 +9,8 @@ import HeaderServerComponent from "@/components/HeaderServerComponent";
 import Footer from "@/components/Footer";
 import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from 'next';
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -86,6 +87,8 @@ export default async function RootLayout({ children, params }: LayoutProps) {
           <Footer/>
         </body>
         <GoogleAnalytics gaId="G-QWNHFV141Q" />
+        <SpeedInsights/>
+        <Analytics/>
       </NextIntlClientProvider>
     </html>
   );

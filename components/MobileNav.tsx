@@ -8,9 +8,10 @@ import { FaBars, FaTimes } from "react-icons/fa";
 type Props = {
   homeText: string;
   donateText: string;
+  contactText: string;
 };
 
-export default function MobileNav({ homeText, donateText }: Props) {
+export default function MobileNav({ homeText, donateText,contactText }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
   // Function to close the menu, useful for when a link is clicked
@@ -41,6 +42,9 @@ export default function MobileNav({ homeText, donateText }: Props) {
             onClick={closeMenu}
           >
             {donateText}
+          </Link>
+          <Link href="/contact" className="hover:text-blue-600" onClick={closeMenu}>
+            {contactText}
           </Link>
         </nav>
       </div>

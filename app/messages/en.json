@@ -24,6 +24,23 @@
     "keywords": "israel, license plate, car number, vehicle information, car check, israsel",
     "homeTitle": "Home"
   },
+ "ContactPage": {
+    "title": "Get In Touch",
+    "description": "Have a question or want to work together? We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
+    "emailCardTitle": "Email",
+    "form": {
+      "fullNameLabel": "Full Name",
+      "fullNamePlaceholder": "Enter your full name",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell us about your project, question, or how we can help you...",
+      "submitButton": "Send Message",
+      "sendingButton": "Sending...",
+      "successMessage": "✅ Message sent successfully! We'll get back to you soon.",
+      "errorMessage": "❌ Failed to send message. Please try again."
+    }
+  },
   "CarCheck": {
     "errorEmptyInput": "Please enter a license plate number.",
     "errorInvalidPlate": "License plate must be 6 or 7 or 8 digits.",

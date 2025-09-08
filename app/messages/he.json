@@ -24,6 +24,23 @@
     "keywords": "ישראל, לוחית רישוי, מספר רכב, מידע על רכב, בדיקת רכב, ישראסל",
     "homeTitle": "דף הבית"
   },
+  "ContactPage": {
+    "title": "צרו קשר",
+    "description": "יש לכם שאלה או רוצים לעבוד יחד? נשמח לשמוע מכם. שלחו לנו הודעה ואנו נגיב בהקדם האפשרי.",
+    "emailCardTitle": "אימייל",
+    "form": {
+      "fullNameLabel": "שם מלא",
+      "fullNamePlaceholder": "הזן את שמך המלא",
+      "emailLabel": "כתובת אימייל",
+      "emailPlaceholder": "הזן את כתובת האימייל שלך",
+      "messageLabel": "הודעה",
+      "messagePlaceholder": "ספרו לנו על הפרויקט שלכם, שאלה, או איך אנחנו יכולים לעזור...",
+      "submitButton": "שלח הודעה",
+      "sendingButton": "שולח...",
+      "successMessage": "✅ ההודעה נשלחה בהצלחה! ניצור איתך קשר בהקדם.",
+      "errorMessage": "❌ שליחת ההודעה נכשלה. אנא נסה שוב."
+    }
+  },
   "CarCheck": {
     "searching": "מחפש...",
     "errorEmptyInput": "נא להזין מספר רישוי.",

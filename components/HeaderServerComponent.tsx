@@ -27,6 +27,9 @@ export default async function HeaderServerComponent({ locale }: Props) {
           >
             {t("donate")}
           </Link>
+            <Link href="/contact" className="hover:text-blue-600">
+            {t("contact")}
+          </Link>
         </nav>
 
         {/* Right side content: Language Switcher and Mobile Nav Button */}
@@ -35,7 +38,7 @@ export default async function HeaderServerComponent({ locale }: Props) {
           <LanguageSwitcher />
 
           {/* MobileNav Component - Renders the button and handles its own logic */}
-          <MobileNav homeText={t("home")} donateText={t("donate")} />
+          <MobileNav homeText={t("home")} donateText={t("donate")} contactText={t("contact")} />
         </div>
       </div>
     </header>
