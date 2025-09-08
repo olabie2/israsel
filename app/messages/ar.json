@@ -25,6 +25,7 @@
     "homeTitle": "الرئيسية"
   },
   "CarCheck": {
+    "searching": "جارٍ البحث...",
     "errorEmptyInput": "يرجى إدخال رقم لوحة الترخيص.",
     "errorInvalidPlate": "يجب أن يتكون رقم لوحة الترخيص من 7 أو 8 أرقام.",
     "searchVehicleButton": "بحث عن مركبة",

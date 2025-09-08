@@ -637,7 +637,7 @@ export default function CarCheckPage() {
                 <>
                   <div className="flex items-center">
                     <Loader2 className="mr-3 h-5 w-5 animate-spin" />
-                    Processing…
+                    {tCar("searching")}
                   </div>
                 </>
               ) : (

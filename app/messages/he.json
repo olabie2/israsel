@@ -25,6 +25,7 @@
     "homeTitle": "דף הבית"
   },
   "CarCheck": {
+    "searching": "מחפש...",
     "errorEmptyInput": "נא להזין מספר רישוי.",
     "errorInvalidPlate": "מספר רישוי חייב להכיל 7 או 8 ספרות.",
     "searchVehicleButton": "חיפוש רכב",

@@ -28,6 +28,7 @@
     "errorEmptyInput": "Please enter a license plate number.",
     "errorInvalidPlate": "License plate must be 6 or 7 or 8 digits.",
     "searchVehicleButton": "Search Vehicle",
+    "searching": "Searching...",
     "searchHint": "Enter your 7 or 8-digit vehicle registration number to access official Ministry of Transport data",
     "vehicleNumberLabel": "Vehicle Number",
     "vehicleNumberPlaceholder": "Enter vehicle number (e.g., 1234567)",
