@@ -566,30 +566,30 @@ export default function CarCheckPage() {
         <title>{t("landing_title")}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <div className="relative flex min-h-[60vh] items-center justify-center overflow-hidden">
-        <video
-          className="absolute inset-0 h-full w-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/186171-877288383-poster.webp"
-        >
-          <source src="/186171-877288383-small.webm" type="video/webm" />
-          <source src="/186171-877288383_small.mp4" type="video/mp4" />
-          <source src="/186171-877288383.mp4" type="video/mp4" />
-          {t("videoTagNotSupported")}
-        </video>
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className="relative z-10 mx-auto max-w-4xl px-4 text-center text-white">
-          <h1 className="mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-4xl font-bold text-transparent md:text-6xl">
-            {t("landing_title")}
-          </h1>
-          <p className="font-light text-gray-200 text-xl md:text-2xl">
-            {t("landing_description")}
-          </p>
-        </div>
-      </div>
+     <div className="relative flex min-h-[60vh] items-center justify-center overflow-hidden">
+  <video
+    className="absolute inset-0 h-full w-full object-cover"
+    autoPlay
+    muted
+    loop
+    playsInline
+    poster="/186171-877288383-poster.webp"
+  >
+    <source src="/186171-877288383-small.webm" type="video/webm" />
+    <source src="/186171-877288383_small.mp4" type="video/mp4" />
+    <source src="/186171-877288383.mp4" type="video/mp4" />
+    {t("videoTagNotSupported")}
+  </video>
+  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+  <div className="relative z-10 mx-auto max-w-4xl px-4 text-center text-white">
+    <h1 className="mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text pb-2 text-4xl font-bold text-transparent md:text-6xl">
+      {t("landing_title")}
+    </h1>
+    <p className="font-light text-gray-200 text-xl md:text-2xl">
+      {t("landing_description")}
+    </p>
+  </div>
+</div>
       <div className="bg-white py-12">
         <div className="mx-auto max-w-2xl px-4">
           <form onSubmit={handleSearch} className="space-y-6">
