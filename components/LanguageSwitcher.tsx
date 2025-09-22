@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LuLanguages, LuChevronDown } from "react-icons/lu";
 import { useLocale } from "next-intl";
+import { useState, useEffect, useRef } from "react";
 
 // Added a "short" property for the 2-letter code
 const languages = [
@@ -15,15 +16,32 @@ const languages = [
 export default function LanguageSwitcher() {
   const locale = useLocale();
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   const currentLanguage = languages.find((l) => l.code === locale);
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownRef]);
+
+
   return (
-    <div className="relative group z-50">
+    <div className="relative" ref={dropdownRef}>
       {/* --- RESPONSIVE BUTTON --- */}
       <button
+        onClick={() => setIsOpen(!isOpen)}
         className="flex items-center justify-between rounded-lg bg-white text-gray-800 border border-gray-300 hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 shadow-sm
-                   px-3 py-2 min-w-[70px]  /* --- Mobile styles: smaller padding and width --- */
+                   px-3 py-2 w-full  /* --- Mobile styles: smaller padding --- */
                    md:px-4 md:py-3 md:min-w-[140px] /* --- Desktop overrides: larger padding and width --- */"
       >
         <div className="flex items-center space-x-2">
@@ -40,14 +58,23 @@ export default function LanguageSwitcher() {
             {currentLanguage?.short || "Lang"}
           </span>
         </div>
-        <LuChevronDown className="text-sm text-gray-500 group-hover:rotate-180 transition-transform duration-200" />
+        <LuChevronDown
+          className={`text-sm text-gray-500 transition-transform duration-200 ${
+            isOpen ? "rotate-180" : ""
+          }`}
+        />
       </button>
 
       {/* --- RESPONSIVE DROPDOWN --- */}
       <div
-        className="absolute right-0 top-full pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 translate-y-1 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 ease-out
+        className={`absolute right-0 top-full pt-1 transition-all duration-200 ease-out z-50
                    w-32 /* --- Mobile width --- */
-                   md:w-44 /* --- Desktop width --- */"
+                   md:w-44 /* --- Desktop width --- */
+                   ${
+                     isOpen
+                       ? "opacity-100 visible translate-y-0"
+                       : "opacity-0 invisible translate-y-1"
+                   }`}
       >
         <div className="bg-white border border-gray-200 rounded-xl shadow-lg">
           <div className="py-2">
@@ -55,6 +82,7 @@ export default function LanguageSwitcher() {
               <div key={lang.code}>
                 <Link
                   href={`/${lang.code}${pathname.replace(/^\/[a-z]{2}/, "")}`}
+                  onClick={() => setIsOpen(false)}
                   className={`flex items-center px-4 py-2 text-sm hover:bg-blue-50 hover:text-blue-700 transition-colors duration-150 ${
                     locale === lang.code
                       ? "bg-blue-50 text-blue-700 font-medium"
