@@ -244,10 +244,13 @@ const Badge: FC<{
 
 // --- SafetyRecalls Component ---
 const SafetyRecalls: FC<{ recalls?: Recall[] }> = ({ recalls }) => {
+  
   const t = useTranslations("CarCheck");
   // ***** CHANGE 2: Get all messages for manual lookup *****
   const messages = useMessages();
-
+ if (!recalls || recalls.length === 0) {
+    return null;
+  }
   // ***** CHANGE 3: The new, robust translation function for this component *****
   const translateWithFallback = (category: string, value?: string): string => {
     if (!value) {
@@ -638,7 +641,7 @@ export default function CarCheckPage() {
           </p>
         </div>
       </div>
-      <main className="min-h-screen bg-gray-50 py-8">
+      <main className="min-h-[400px] bg-gray-50 py-8">
         <div className="mx-auto max-w-7xl px-4">
           {error && (
             <div className="mb-8 rounded-xl border border-red-200 bg-red-50 p-6 text-center">
