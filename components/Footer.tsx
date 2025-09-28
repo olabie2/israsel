@@ -41,7 +41,7 @@ export default async function Footer() {
           {/* Footer text */}
           <div className="border-t border-gray-700 pt-6">
             <p className="text-gray-400 text-sm">
-              {t("madeWith")}
+              {t("madeWith")} <a className="underline text-white font-bold" href="https://github.com/olabie2">@olabie</a>
             </p>
           </div>
         </div>
