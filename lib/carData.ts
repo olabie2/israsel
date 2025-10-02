@@ -11,16 +11,16 @@ type GovApiKey = keyof typeof GOV_APIS;
 const fetchApiData = async (apiKey:GovApiKey,   queryParams: Record<string, unknown> | null = null) => {
   // Log and exit if the necessary parameters for a query are missing.
   if (!queryParams) {
-    console.log(
-      `[INFO] Skipping API call for "${apiKey}" due to missing parameters.`
-    );
+    // console.log(
+    //   `[INFO] Skipping API call for "${apiKey}" due to missing parameters.`
+    // );
     return { key: apiKey, data: [] };
   }
 
   // Log the API and parameters being fetched.
-  console.log(
-    `[FETCHING] API: "${apiKey}", Parameters: ${JSON.stringify(queryParams)}`
-  );
+  // console.log(
+  //   `[FETCHING] API: "${apiKey}", Parameters: ${JSON.stringify(queryParams)}`
+  // );
 
   const resourceId = GOV_APIS[apiKey]?.id;
   const url = `${BASE_URL}${resourceId}&q=${JSON.stringify(queryParams)}`;
@@ -29,9 +29,9 @@ const fetchApiData = async (apiKey:GovApiKey,   queryParams: Record<string, unkn
     const res = await fetch(url);
     if (!res.ok) {
       // Log errors related to the API response (e.g., 404, 500).
-      console.error(
-        `[FAILURE] API call for "${apiKey}" failed with status: ${res.status}`
-      );
+      // console.error(
+      //   `[FAILURE] API call for "${apiKey}" failed with status: ${res.status}`
+      // );
       return { key: apiKey, data: [] };
     }
 
@@ -39,9 +39,9 @@ const fetchApiData = async (apiKey:GovApiKey,   queryParams: Record<string, unkn
     const records = data.result.records || [];
 
     // Log a successful fetch and the number of records found.
-    console.log(
-      `[SUCCESS] API call for "${apiKey}" returned ${records.length} records.`
-    );
+    // console.log(
+    //   `[SUCCESS] API call for "${apiKey}" returned ${records.length} records.`
+    // );
 
     return {
       key: apiKey,
@@ -50,7 +50,7 @@ const fetchApiData = async (apiKey:GovApiKey,   queryParams: Record<string, unkn
   } catch (error) {
     // Log network or other unexpected errors.
     
-    console.error(`[ERROR] Network error for "${apiKey}":`, error);
+    // console.error(`[ERROR] Network error for "${apiKey}":`, error);
     return { key: apiKey, data: [] };
   }
 };
@@ -62,12 +62,12 @@ const fetchApiData = async (apiKey:GovApiKey,   queryParams: Record<string, unkn
  * @returns {Promise<Object>} A promise that resolves to an object containing all fetched data.
  */
 export const getAllVehicleData = async (carNumber : string|number) => {
-  console.log(`--- Starting data fetch for car number: ${carNumber} ---`);
+  // console.log(`--- Starting data fetch for car number: ${carNumber} ---`);
  const finalResults: Record<string, unknown[]> = {};
   let baseVehicleInfo = null;
 
   // --- PHASE 1: Get Base Vehicle Data ---
-  console.log("--- PHASE 1: Fetching Base Vehicle Data ---");
+  // console.log("--- PHASE 1: Fetching Base Vehicle Data ---");
 
   // Group 1: Private and Commercial Vehicles
  const privateAndCommercialApiKeys: (keyof typeof GOV_APIS)[] = [
@@ -79,7 +79,7 @@ export const getAllVehicleData = async (carNumber : string|number) => {
     finalResults[key] = result.data;
     if (result.data.length > 0 && !baseVehicleInfo) {
       baseVehicleInfo = result.data[0];
-      console.log(`[INFO] Base vehicle info found in "${key}".`);
+      // console.log(`[INFO] Base vehicle info found in "${key}".`);
       break; 
     }
   }
@@ -93,7 +93,7 @@ export const getAllVehicleData = async (carNumber : string|number) => {
     finalResults[importedApiKey] = result.data;
     if (result.data.length > 0) {
       baseVehicleInfo = result.data[0];
-      console.log(`[INFO] Base vehicle info found in "${importedApiKey}".`);
+      // console.log(`[INFO] Base vehicle info found in "${importedApiKey}".`);
     }
   }
 
@@ -106,15 +106,15 @@ export const getAllVehicleData = async (carNumber : string|number) => {
     finalResults[twoWheeledApiKey] = result.data;
     if (result.data.length > 0) {
       baseVehicleInfo = result.data[0];
-      console.log(`[INFO] Base vehicle info found in "${twoWheeledApiKey}".`);
+      // console.log(`[INFO] Base vehicle info found in "${twoWheeledApiKey}".`);
     }
   }
 
   // Group 4: Off-the-Road Vehicles (if still not found)
   if (!baseVehicleInfo) {
-    console.log(
-      "[INFO] No data found in primary APIs. Checking 'off the road' databases..."
-    );
+    // console.log(
+    //   "[INFO] No data found in primary APIs. Checking 'off the road' databases..."
+    // );
   const offRoadApiKeys: (keyof typeof GOV_APIS)[] = [
   "VEHICLES_TAKEN_OFF_THE_ROAD_WITH_FINAL_CANCELLATION_STATUS_LATEST",
   "VEHICLES_TAKEN_OFF_THE_ROAD_WITH_FINAL_CANCELLATION_STATUS_2010_TO_2016_INCLUSIVE",
@@ -125,21 +125,21 @@ export const getAllVehicleData = async (carNumber : string|number) => {
       finalResults[key] = result.data;
       if (result.data.length > 0) {
         baseVehicleInfo = result.data[0];
-        console.log(`[INFO] Base vehicle info found in "${key}".`);
+        // console.log(`[INFO] Base vehicle info found in "${key}".`);
         break;
       }
     }
   }
 
   if (!baseVehicleInfo) {
-    console.warn(
-      "[WARN] Could not find any base information for this car number. Process will stop here."
-    );
+    // console.warn(
+    //   "[WARN] Could not find any base information for this car number. Process will stop here."
+    // );
     return finalResults;
   }
 
   // --- PHASE 2: Get Additional & Dependent Data ---
-  console.log("--- PHASE 2: Fetching Additional and Dependent Data ---");
+  // console.log("--- PHASE 2: Fetching Additional and Dependent Data ---");
 
   const { degem_nm, shnat_yitzur, degem_cd, kinuy_mishari } = baseVehicleInfo;
   const normalizedDegemNm = degem_nm?.trim();
@@ -196,6 +196,6 @@ export const getAllVehicleData = async (carNumber : string|number) => {
     finalResults[result.key] = result.data;
   }
 
-  console.log("--- All data fetching complete. ---");
+  // console.log("--- All data fetching complete. ---");
   return finalResults;
 };
