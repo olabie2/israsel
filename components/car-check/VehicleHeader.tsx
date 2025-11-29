@@ -59,11 +59,11 @@ export const VehicleHeader = ({ vehicleData, translateWithFallback }: VehicleHea
                             <FaCar className="text-3xl text-blue-600" />
                         </div>
                         <div>
-                            <h1 className="text-3xl font-bold text-gray-900">
+                            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
                                 {translateWithFallback("Manufacturer", vehicleData.tozeret_nm)}{" "}
                                 {vehicleData.kinuy_mishari || ""}
                             </h1>
-                            <p className="text-lg text-gray-600">
+                            <p className="text-base sm:text-lg text-gray-600">
                                 {vehicleData.shnat_yitzur || tCar("unknown")} •{" "}
                                 {translateWithFallback("ModelType", vehicleData.sug_degem)}
                             </p>
@@ -88,7 +88,7 @@ export const VehicleHeader = ({ vehicleData, translateWithFallback }: VehicleHea
                 </div>
                 <div className="text-right">
                     <p className="mb-1 text-sm text-gray-500">{tCar("vehicleNumberLabel")}</p>
-                    <p className="text-2xl font-bold text-gray-900">{vehicleData.mispar_rechev}</p>
+                    <p className="text-xl sm:text-2xl font-bold text-gray-900">{vehicleData.mispar_rechev}</p>
                 </div>
             </div>
         </div>

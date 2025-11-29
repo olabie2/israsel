@@ -20,10 +20,10 @@ export const InfoItem: FC<InfoItemProps> = ({
             >
                 {icon}
             </div>
-            <span className="text-sm font-medium text-gray-700">{label}</span>
+            <span className="text-xs sm:text-sm font-medium text-gray-700">{label}</span>
         </div>
         <div
-            className={`text-lg font-semibold ${priority ? "text-blue-900" : "text-gray-900"
+            className={`text-base sm:text-lg font-semibold ${priority ? "text-blue-900" : "text-gray-900"
                 }`}
         >
             {value || "Unknown"}

@@ -98,7 +98,7 @@ export const SafetyRecalls: FC<SafetyRecallsProps> = ({ recalls }) => {
                                 }`}
                         />
                     </div>
-                    <h2 className="text-xl font-bold text-gray-900">
+                    <h2 className="text-lg sm:text-xl font-bold text-gray-900">
                         {t("safetyRecallsTitle")}
                     </h2>
                 </div>

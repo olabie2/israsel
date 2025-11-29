@@ -20,7 +20,7 @@ export const EssentialInfo = ({ vehicleData, translateWithFallback }: EssentialI
                 <div className="rounded-xl bg-blue-100 p-3">
                     <FaStar className="text-2xl text-blue-600" />
                 </div>
-                <h2 className="text-2xl font-bold text-blue-900">
+                <h2 className="text-xl sm:text-2xl font-bold text-blue-900">
                     {tCar("essentialInformationTitle")}
                 </h2>
             </div>

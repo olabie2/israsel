@@ -25,7 +25,7 @@ export const OwnershipHistory = ({ vehicleData, translateWithFallback }: Ownersh
                     <div className="rounded-lg bg-purple-100 p-2">
                         <FaUser className="text-xl text-purple-600" />
                     </div>
-                    <h2 className="text-xl font-bold text-gray-900">
+                    <h2 className="text-lg sm:text-xl font-bold text-gray-900">
                         {tCar("ownershipHistoryTitle")}
                     </h2>
                 </div>

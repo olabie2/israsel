@@ -35,7 +35,7 @@ export const VehicleDetails = ({ vehicleData, translateWithFallback }: VehicleDe
                             <div className="rounded-lg bg-gray-100 p-2">
                                 <FaInfoCircle className="text-xl text-gray-600" />
                             </div>
-                            <h2 className="text-xl font-bold text-gray-900">
+                            <h2 className="text-lg sm:text-xl font-bold text-gray-900">
                                 {tCar("completeVehicleInfoTitle")}
                             </h2>
                         </div>
@@ -126,7 +126,7 @@ export const VehicleDetails = ({ vehicleData, translateWithFallback }: VehicleDe
             </div>
             <div className="space-y-6">
                 <div className="rounded-2xl bg-white p-6 shadow-lg">
-                    <h3 className="mb-4 flex items-center gap-2 text-lg font-bold text-gray-900">
+                    <h3 className="mb-4 flex items-center gap-2 text-base sm:text-lg font-bold text-gray-900">
                         <FaShieldAlt className="text-gray-600" />
                         {tCar("securityInformationTitle")}
                     </h3>
