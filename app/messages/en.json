@@ -42,6 +42,7 @@
     }
   },
   "CarCheck": {
+    "ownershipHelpText": "coming soon",
     "errorEmptyInput": "Please enter a license plate number.",
     "errorInvalidPlate": "License plate must be 6 or 7 or 8 digits.",
     "searchVehicleButton": "Search Vehicle",

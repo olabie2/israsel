@@ -61,8 +61,8 @@ export const OwnershipHistory = ({ vehicleData, translateWithFallback }: Ownersh
                                             <div className="flex items-center gap-3">
                                                 <div
                                                     className={`flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold ${index === 0
-                                                            ? "bg-green-100 text-green-700"
-                                                            : "bg-gray-100 text-gray-600"
+                                                        ? "bg-green-100 text-green-700"
+                                                        : "bg-gray-100 text-gray-600"
                                                         }`}
                                                 >
                                                     {index + 1}
@@ -78,10 +78,10 @@ export const OwnershipHistory = ({ vehicleData, translateWithFallback }: Ownersh
                                             <div className="flex items-center gap-2">
                                                 <div
                                                     className={`rounded p-1 ${ownershipType === "Dealer"
-                                                            ? "bg-blue-100"
-                                                            : ownershipType === "Private"
-                                                                ? "bg-green-100"
-                                                                : "bg-gray-100"
+                                                        ? "bg-blue-100"
+                                                        : ownershipType === "Private"
+                                                            ? "bg-green-100"
+                                                            : "bg-gray-100"
                                                         }`}
                                                 >
                                                     {ownershipType === "Dealer" ? (
@@ -92,10 +92,10 @@ export const OwnershipHistory = ({ vehicleData, translateWithFallback }: Ownersh
                                                 </div>
                                                 <span
                                                     className={`font-medium ${ownershipType === "Dealer"
-                                                            ? "text-blue-700"
-                                                            : ownershipType === "Private"
-                                                                ? "text-green-700"
-                                                                : "text-gray-700"
+                                                        ? "text-blue-700"
+                                                        : ownershipType === "Private"
+                                                            ? "text-green-700"
+                                                            : "text-gray-700"
                                                         }`}
                                                 >
                                                     {ownershipType}
@@ -123,13 +123,13 @@ export const OwnershipHistory = ({ vehicleData, translateWithFallback }: Ownersh
                         </tbody>
                     </table>
                 </div>
-                <div className="mt-6 rounded-lg bg-gray-50 p-4">
+                {/* <div className="mt-6 rounded-lg bg-gray-50 p-4">
                     <h4 className="mb-2 flex items-center gap-2 font-semibold text-gray-800">
                         <FaInfoCircle className="text-blue-500" />
                         {tCar("ownershipHelpTitle")}
                     </h4>
                     <p className="text-sm text-gray-600">{tCar("ownershipHelpText")}</p>
-                </div>
+                </div> */}
             </div>
         </div>
     );
