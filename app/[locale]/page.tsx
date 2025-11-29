@@ -194,19 +194,17 @@ const InfoItem: FC<InfoItemProps> = ({
   priority = false,
 }) => (
   <div
-    className={`rounded-xl border p-4 transition-all duration-200 hover:shadow-md ${
-      priority
-        ? "border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50 hover:border-blue-300"
-        : "border-gray-200 bg-white hover:border-gray-300"
-    }`}
+    className={`rounded-xl border p-4 transition-all duration-200 hover:shadow-md ${priority
+      ? "border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50 hover:border-blue-300"
+      : "border-gray-200 bg-white hover:border-gray-300"
+      }`}
   >
     {" "}
     <div className="mb-2 flex items-center gap-3">
       {" "}
       <div
-        className={`rounded-lg p-2 ${
-          priority ? "bg-blue-100 text-blue-600" : "bg-gray-100 text-gray-600"
-        }`}
+        className={`rounded-lg p-2 ${priority ? "bg-blue-100 text-blue-600" : "bg-gray-100 text-gray-600"
+          }`}
       >
         {" "}
         {icon}{" "}
@@ -214,9 +212,8 @@ const InfoItem: FC<InfoItemProps> = ({
       <span className="text-sm font-medium text-gray-700">{label}</span>{" "}
     </div>{" "}
     <div
-      className={`text-lg font-semibold ${
-        priority ? "text-blue-900" : "text-gray-900"
-      }`}
+      className={`text-lg font-semibold ${priority ? "text-blue-900" : "text-gray-900"
+        }`}
     >
       {" "}
       {value || "Unknown"}{" "}
@@ -244,11 +241,11 @@ const Badge: FC<{
 
 // --- SafetyRecalls Component ---
 const SafetyRecalls: FC<{ recalls?: Recall[] }> = ({ recalls }) => {
-  
+
   const t = useTranslations("CarCheck");
   // ***** CHANGE 2: Get all messages for manual lookup *****
   const messages = useMessages();
- if (!recalls || recalls.length === 0) {
+  if (!recalls || recalls.length === 0) {
     return null;
   }
   // ***** CHANGE 3: The new, robust translation function for this component *****
@@ -314,14 +311,12 @@ const SafetyRecalls: FC<{ recalls?: Recall[] }> = ({ recalls }) => {
       <div className="border-b border-gray-200 p-6">
         <div className="flex items-center gap-3">
           <div
-            className={`rounded-lg p-2 ${
-              hasRecalls ? "bg-red-100" : "bg-green-100"
-            }`}
+            className={`rounded-lg p-2 ${hasRecalls ? "bg-red-100" : "bg-green-100"
+              }`}
           >
             <FaExclamationTriangle
-              className={`text-xl ${
-                hasRecalls ? "text-red-600" : "text-green-600"
-              }`}
+              className={`text-xl ${hasRecalls ? "text-red-600" : "text-green-600"
+                }`}
             />
           </div>
           <h2 className="text-xl font-bold text-gray-900">
@@ -569,30 +564,34 @@ export default function CarCheckPage() {
         <title>{t("landing_title")}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-     <div className="relative flex min-h-[60vh] items-center justify-center overflow-hidden">
-  <video
-    className="absolute inset-0 h-full w-full object-cover"
-    autoPlay
-    muted
-    loop
-    playsInline
-    poster="/186171-877288383-poster.webp"
-  >
-    <source src="/186171-877288383-small.webm" type="video/webm" />
-    <source src="/186171-877288383_small.mp4" type="video/mp4" />
-    <source src="/186171-877288383.mp4" type="video/mp4" />
-    {t("videoTagNotSupported")}
-  </video>
-  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-  <div className="relative z-10 mx-auto max-w-4xl px-4 text-center text-white">
-    <h1 className="mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text pb-2 text-4xl font-bold text-transparent md:text-6xl">
-      {t("landing_title")}
-    </h1>
-    <p className="font-light text-gray-200 text-xl md:text-2xl">
-      {t("landing_description")}
-    </p>
-  </div>
-</div>
+      <div className="relative flex min-h-[60vh] items-center justify-center overflow-hidden">
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/186171-877288383-poster.webp"
+        >
+          <source src="/186171-877288383-small.webm" type="video/webm" />
+          <source src="/186171-877288383_small.mp4" type="video/mp4" />
+          <source src="/186171-877288383.mp4" type="video/mp4" />
+          {t("videoTagNotSupported")}
+        </video>
+        {/* <div className="absolute inset-0 bg-black bg-opacity-30"></div> */}
+        <div className="relative z-10 mx-auto max-w-4xl px-4 text-center text-white">
+          <div className="rounded-2xl bg-black/40 backdrop-blur-sm px-8 py-10 shadow-2xl">
+            <h1 className="mb-6 pb-2 text-4xl font-bold text-white md:text-6xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                {t("landing_title")}
+              </span>
+            </h1>
+            <p className="font-light text-white text-xl md:text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+              {t("landing_description")}
+            </p>
+          </div>
+        </div>
+      </div>
       <div className="bg-white py-12">
         <div className="mx-auto max-w-2xl px-4">
           <form onSubmit={handleSearch} className="space-y-6">
@@ -805,8 +804,8 @@ export default function CarCheckPage() {
                           value={
                             vehicleData.nefah_manoa
                               ? tCar("engineCapacityValue", {
-                                  value: vehicleData.nefah_manoa,
-                                })
+                                value: vehicleData.nefah_manoa,
+                              })
                               : tCar("unknown")
                           }
                           icon={<FaTachometerAlt />}
@@ -816,8 +815,8 @@ export default function CarCheckPage() {
                           value={
                             vehicleData.koah_sus
                               ? tCar("horsepowerValue", {
-                                  value: vehicleData.koah_sus,
-                                })
+                                value: vehicleData.koah_sus,
+                              })
                               : tCar("unknown")
                           }
                           icon={<FaTachometerAlt />}
@@ -844,8 +843,8 @@ export default function CarCheckPage() {
                           value={
                             vehicleData.kvutzat_zihum
                               ? tCar("pollutionGroupValue", {
-                                  group: vehicleData.kvutzat_zihum,
-                                })
+                                group: vehicleData.kvutzat_zihum,
+                              })
                               : tCar("unknown")
                           }
                           icon={<FaLeaf />}
@@ -907,7 +906,7 @@ export default function CarCheckPage() {
                 </div>
                 <div className="p-6">
                   {vehicleData.ownershipHistory &&
-                  vehicleData.ownershipHistory.length > 0 ? (
+                    vehicleData.ownershipHistory.length > 0 ? (
                     <>
                       <div className="overflow-x-auto">
                         <table className="w-full">
@@ -942,11 +941,10 @@ export default function CarCheckPage() {
                                     <td className="px-4 py-4">
                                       <div className="flex items-center gap-3">
                                         <div
-                                          className={`flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold ${
-                                            index === 0
-                                              ? "bg-green-100 text-green-700"
-                                              : "bg-gray-100 text-gray-600"
-                                          }`}
+                                          className={`flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold ${index === 0
+                                            ? "bg-green-100 text-green-700"
+                                            : "bg-gray-100 text-gray-600"
+                                            }`}
                                         >
                                           {index + 1}
                                         </div>
@@ -954,21 +952,20 @@ export default function CarCheckPage() {
                                           {index === 0
                                             ? tCar("currentOwnership")
                                             : tCar("previousOwnership", {
-                                                index,
-                                              })}
+                                              index,
+                                            })}
                                         </span>
                                       </div>
                                     </td>
                                     <td className="px-4 py-4">
                                       <div className="flex items-center gap-2">
                                         <div
-                                          className={`rounded p-1 ${
-                                            ownershipType === "Dealer"
-                                              ? "bg-blue-100"
-                                              : ownershipType === "Private"
+                                          className={`rounded p-1 ${ownershipType === "Dealer"
+                                            ? "bg-blue-100"
+                                            : ownershipType === "Private"
                                               ? "bg-green-100"
                                               : "bg-gray-100"
-                                          }`}
+                                            }`}
                                         >
                                           {ownershipType === "Dealer" ? (
                                             <FaCar className="text-sm text-blue-600" />
@@ -977,13 +974,12 @@ export default function CarCheckPage() {
                                           )}
                                         </div>
                                         <span
-                                          className={`font-medium ${
-                                            ownershipType === "Dealer"
-                                              ? "text-blue-700"
-                                              : ownershipType === "Private"
+                                          className={`font-medium ${ownershipType === "Dealer"
+                                            ? "text-blue-700"
+                                            : ownershipType === "Private"
                                               ? "text-green-700"
                                               : "text-gray-700"
-                                          }`}
+                                            }`}
                                         >
                                           {ownershipType}
                                         </span>
