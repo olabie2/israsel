@@ -5,7 +5,7 @@ export default async function Footer() {
   const t = await getTranslations("Footer");
 
   return (
-    <footer className="bg-gradient-to-r from-gray-900 to-gray-900 text-white">
+    <footer className="bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="text-center">
           {/* Main message */}
@@ -19,7 +19,7 @@ export default async function Footer() {
           </div>
 
           {/* Coffee button */}
-          {/* <div className="mb-8">
+          <div className="mb-8">
             <a
               href="https://buymeacoffee.com/olabie"
               target="_blank"
@@ -29,14 +29,14 @@ export default async function Footer() {
               <span className="text-2xl">☕</span>
               <span className="text-lg">{t("buyMeACoffee")}</span>
             </a>
-          </div> */}
+          </div>
 
           {/* Decorative elements */}
-          {/* <div className="flex justify-center items-center space-x-4 text-2xl mb-6">
+          <div className="flex justify-center items-center space-x-4 text-2xl mb-6">
             <span className="animate-bounce">🚀</span>
             <span className="animate-pulse">💫</span>
             <span className="animate-bounce">🎨</span>
-          </div> */}
+          </div>
 
           {/* Footer text */}
           <div className="border-t border-gray-700 pt-6">
