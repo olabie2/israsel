@@ -21,13 +21,8 @@ export default async function HeaderServerComponent({ locale }: Props) {
           <Link href="/" className="hover:text-blue-600">
             {t("home")}
           </Link>
-          <Link
-            href="https://buymeacoffee.com/olabie"
-            className="hover:text-blue-600"
-          >
-            {t("donate")}
-          </Link>
-            <Link href="/contact" className="hover:text-blue-600">
+
+          <Link href="/contact" className="hover:text-blue-600">
             {t("contact")}
           </Link>
         </nav>
