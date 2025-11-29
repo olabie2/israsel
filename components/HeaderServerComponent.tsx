@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Link from "next/link";
-import MobileNav from "./MobileNav"; // Import the new client component
+import MobileNav from "./MobileNav";
 
 type Props = { locale: string };
 
